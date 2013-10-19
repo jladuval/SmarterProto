@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <video autoplay></video>
-
-    <script>
+(function(){
     window.URL = window.URL || window.webkitURL;
         navigator.getUserMedia  = 
             navigator.getUserMedia 
@@ -29,7 +20,4 @@
           // Ready to go. Do some stuff.
         };
       }, onFailSoHard);
-    </script>
-
-  </body>
-</html>
+})();

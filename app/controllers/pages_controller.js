@@ -5,7 +5,7 @@ var PagesController = new Controller();
 
 PagesController.main = function() {
   this.title = 'Locomotive'
-  this.render();
+  this.render('main');
 }
 
 module.exports = PagesController;
