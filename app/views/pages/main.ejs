@@ -1,5 +1,21 @@
 <% layout('../shared/layout') -%>
-<video autoplay></video>
-<% block('header', "<p>I'm in the header.</p>") -%>
+<script type="text/x-handlebars" id="application">
+    <video autoplay></video>
+    {{outlet}}
+</script>
+<script type="text/x-handlebars" id="index">
+  {{#linkTo "question"}}Start Questionnaire{{/linkTo}}
+</script>
+<script type="text/x-handlebars" id="start">
+     <p>
+        Building Questionnaire
+    </p>
+</script>
+<script type="text/x-handlebars" id="question">
+    {{#each questions}}
+        {{{ this.number }}}
+        {{{ this.questionText }}}
+    {{/each }}
+    <button {{action "next"}}>Next Question</button>
+</script>
 <% script('/js/sa/questionnaire.js') -%>
-<% block('footer', "<p>I'm in the footer.</p>") -%>

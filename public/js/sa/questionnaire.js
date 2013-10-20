@@ -1,3 +1,48 @@
+var Questionnaire = Ember.Application.create({
+    LOG_TRANSITIONS: true,
+    LOG_BINDINGS: true,
+    LOG_VIEW_LOOKUPS: true,
+    LOG_STACKTRACE_ON_DEPRECATION: true,
+    LOG_VERSION: true,
+    debugMode: true
+});
+
+Questionnaire.Router.map(function () { 
+    this.resource("start");
+    this.resource("question");
+});
+
+Questionnaire.Question = Ember.Object.extend({
+    number: 0,
+    maxTime: 0,
+    questionText: "",
+});
+
+Questionnaire.QuestionController = Ember.Controller.extend({
+    questions: Ember.A([
+        Questionnaire.Question.create({
+            number: 1,
+            questionText: "How old are you1?"
+        }),
+         Questionnaire.Question.create({
+            number: 2,
+            questionText: "How old are you2?"
+        }), 
+        Questionnaire.Question.create({
+            number: 3,
+            questionText: "How old are you3?"
+        })]),
+    questions2: Ember.A(["1", "@", "$"]),
+    currentQuestionNo : 0,
+    currentQuestion: {},
+    actions: {
+        next: function() {
+            this.set("currentQuestionNo", this.currentQuestionNo + 1);
+            this.set("currentQuestion", this.questions[this.currentQuestionNo]);
+        }
+    }
+});
+
 (function(){
     window.URL = window.URL || window.webkitURL;
         navigator.getUserMedia  = 
