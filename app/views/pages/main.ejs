@@ -12,10 +12,10 @@
     </p>
 </script>
 <script type="text/x-handlebars" id="question">
-    {{#each questions}}
+    {{#with currentQuestion}}
         {{{ this.number }}}
         {{{ this.questionText }}}
-    {{/each }}
+    {{/with }}
     <button {{action "next"}}>Next Question</button>
 </script>
 <% script('/js/sa/questionnaire.js') -%>

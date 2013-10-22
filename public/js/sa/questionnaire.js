@@ -18,8 +18,7 @@ Questionnaire.Question = Ember.Object.extend({
     questionText: "",
 });
 
-Questionnaire.QuestionController = Ember.Controller.extend({
-    questions: Ember.A([
+var Questions = Ember.A([
         Questionnaire.Question.create({
             number: 1,
             questionText: "How old are you1?"
@@ -31,10 +30,12 @@ Questionnaire.QuestionController = Ember.Controller.extend({
         Questionnaire.Question.create({
             number: 3,
             questionText: "How old are you3?"
-        })]),
-    questions2: Ember.A(["1", "@", "$"]),
+        })]);
+
+Questionnaire.QuestionController = Ember.Controller.extend({
+    questions: Questions,
     currentQuestionNo : 0,
-    currentQuestion: {},
+    currentQuestion: Questions[0],
     actions: {
         next: function() {
             this.set("currentQuestionNo", this.currentQuestionNo + 1);
@@ -55,7 +56,7 @@ Questionnaire.QuestionController = Ember.Controller.extend({
       };
     
       // Not showing vendor prefixes.
-      navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+      navigator.getUserMedia({video: true, audio: false}, function(localMediaStream) {
         var video = document.querySelector('video');
         video.src = window.URL.createObjectURL(localMediaStream);
     
