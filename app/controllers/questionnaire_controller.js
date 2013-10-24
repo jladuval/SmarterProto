@@ -1,11 +1,11 @@
 var locomotive = require('locomotive')
   , Controller = locomotive.Controller;
 
-var PagesController = new Controller();
+var QuestionnaireController = new Controller();
 
-PagesController.main = function() {
+QuestionnaireController.main = function() {
   this.title = 'Locomotive'
   this.render('main');
 }
 
-module.exports = PagesController;
+module.exports = QuestionnaireController;

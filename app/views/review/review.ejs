@@ -1,0 +1,21 @@
+<% layout('../shared/layout') -%>
+<script type="text/x-handlebars" id="application">
+    <video autoplay></video>
+    {{outlet}}
+</script>
+<script type="text/x-handlebars" id="index">
+  {{#linkTo "question"}}Start Questionnaire{{/linkTo}}
+</script>
+<script type="text/x-handlebars" id="start">
+     <p>
+        Building Questionnaire
+    </p>
+</script>
+<script type="text/x-handlebars" id="question">
+    {{#with currentQuestion}}
+        {{{ this.number }}}
+        {{{ this.questionText }}}
+    {{/with }}
+    <button {{action "next"}}>Next Question</button>
+</script>
+<% script('/js/sa/questionnaire.js') -%>
