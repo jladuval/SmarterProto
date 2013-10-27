@@ -7,4 +7,5 @@
 // information.
 module.exports = function routes() {
   this.root('questionnaire#main');
-}
+  this.match('review', 'review#main');
+};

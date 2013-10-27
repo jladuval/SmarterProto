@@ -4,8 +4,8 @@ var locomotive = require('locomotive')
 var ReviewController = new Controller();
 
 ReviewController.main = function() {
-  this.title = 'Locomotive'
-  this.render('main');
-}
+  this.title = 'Review Applicant';
+  this.render('review');
+};
 
 module.exports = ReviewController;
