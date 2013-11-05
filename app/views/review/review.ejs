@@ -1,40 +1,357 @@
 <% layout('../shared/layout') -%>
-<div style="text-align:center"> 
-  <button onclick="playPause()">Play/Pause</button> 
-  <button onclick="makeBig()">Big</button>
-  <button onclick="makeSmall()">Small</button>
-  <button onclick="makeNormal()">Normal</button>
-  <br> 
-  <video id="video1" class="review-video" width="600">
-    <source src="/video/mov_bbb.mp4" type="video/mp4">
-    <source src="/video/mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML5 video.
-  </video>
-</div> 
 
-<script> 
-    var myVideo=document.getElementById("video1"); 
-    
-    function playPause()
-    { 
-        if (myVideo.paused) 
-            myVideo.play(); 
-        else 
-            myVideo.pause(); 
-    } 
-    
-    function makeBig()
-    { 
-        myVideo.width=560; 
-    } 
-    
-    function makeSmall()
-    { 
-        myVideo.width=320; 
-    } 
-    
-    function makeNormal()
-    { 
-        myVideo.width=420; 
-    } 
-</script> 
+<div class="content container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="page-title">Visions Live Ltd <small>QA Lead</small></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <section class="widget">
+                <header>
+                    <h4>
+                        <i class="icon-group"></i>
+                        Mary Poppins
+                    </h4>
+                </header>
+                <div class="body no-margin">
+                    <div class="row">
+                        <div class="col-sm-2"><a>Previous Applicant</a></div>
+
+                             <video class="col-sm-6" id="video1">
+                                <source src="/video/mov_bbb.mp4" type="video/mp4">
+                                <source src="/video/mov_bbb.ogg" type="video/ogg">
+                                Your browser does not support HTML5 video.
+                             </video>
+
+                         <div class="col-sm-2 pull-right"><a>Next Applicant</a></div>
+                    </div>
+                    <div class="visits-info well well-sm">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="value"><i class="icon-caret-down color-red"></i>REJECT ANSWER</div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="value">ACCEPT ANSWER<i class="icon-caret-up color-green"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          
+            <section class="widget large">
+                <header>
+                    <h4>
+                        <i class="eicon-chat"></i>
+                        Comments
+                    </h4>
+                </header>
+                <div class="body">
+                    <div id="chat" class="chat">
+                        <div id="chat-messages" class="chat-messages">
+                            <div class="chat-message">
+                                <div class="sender pull-left">
+                                    <div class="icon">
+                                        <img src="img/2.jpg" class="img-circle" alt="">
+                                    </div>
+                                    <div class="time">
+                                        4 min
+                                    </div>
+                                </div>
+                                <div class="chat-message-body">
+                                    <span class="arrow"></span>
+                                    <div class="sender"><a href="#">Tikhon Laninga</a></div>
+                                    <div class="text">
+                                        This person looks ok, but I'm worried about how little experience they have.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-message">
+                                <div class="sender pull-right">
+                                    <div class="icon">
+                                        <img src="img/1.jpg" class="img-circle" alt="">
+                                    </div>
+                                    <div class="time">
+                                        3 min
+                                    </div>
+                                </div>
+                                <div class="chat-message-body on-left">
+                                    <span class="arrow"></span>
+                                    <div class="sender"><a href="#">Cenhelm Houston</a></div>
+                                    <div class="text">
+                                        I gave them a call today and it doesn't look like that's going to be a problem.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-message">
+                                <div class="sender pull-left">
+                                    <div class="icon">
+                                        <img src="img/2.jpg" class="img-circle" alt="">
+                                    </div>
+                                    <div class="time">
+                                        2 min
+                                    </div>
+                                </div>
+                                <div class="chat-message-body">
+                                    <span class="arrow"></span>
+                                    <div class="sender"><a href="#">Tikhon Laninga</a></div>
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt, massa sit amet tempor gravida, sem sem cursus 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-message">
+                                <div class="sender pull-right">
+                                    <div class="icon">
+                                        <img src="img/1.jpg" class="img-circle" alt="">
+                                    </div>
+                                    <div class="time">
+                                        2 min
+                                    </div>
+                                </div>
+                                <div class="chat-message-body on-left">
+                                    <span class="arrow"></span>
+                                    <div class="sender"><a href="#">Cenhelm Houston</a></div>
+                                    <div class="text">
+                                       unc velit felis, elementum tempus porttitor a, suscipit porttitor leo. Sed lacus enim, sollicitudin eget fringilla et, ultrices ut velit. Cras rhoncus tortor et nisi gravida, nec lacinia r
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-message">
+                                <div class="sender pull-left">
+                                    <div class="icon">
+                                        <img src="img/2.jpg" class="img-circle" alt="">
+                                    </div>
+                                    <div class="time">
+                                        1 min
+                                    </div>
+                                </div>
+                                <div class="chat-message-body">
+                                    <span class="arrow"></span>
+                                    <div class="sender"><a href="#">Tikhon Laninga</a></div>
+                                    <div class="text">
+                                        Curabitur eget augue leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id mollis nunc. Phasellus porttitor pretium sodales. Pr
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="chat-footer row">
+                            <div class="col-xs-9">
+                                <input id="new-message" type="text" class="form-control input-transparent" placeholder="Enter your message..">
+                            </div>
+                            <div class="col-xs-3">
+                                <button type="button" id="new-message-btn" class="btn btn-transparent btn-block">Send</button>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-4">
+            <section class="widget widget-tabs">
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#applicants" data-toggle="tab">Unreviewed Applicants</a>
+                        </li>
+                        <li>
+                            <a href="#accepted" data-toggle="tab">Accepted</a>
+                        </li>
+                        <li>
+                            <a href="#rejected" data-toggle="tab">Rejected</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="body tab-content">
+                    <div id="applicants" class="tab-pane active clearfix">
+                        <h5 class="tab-header"><i class="icon-group"></i> 22 Unreviewed Applicants</h5>
+                        <ul class="users-list">
+                            <li>
+                                <img src="img/1.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Finees Lund</a></div>
+                                    <div class="position">Christchurch, NZ</div>
+                                    <div class="time">Applied: Mar 20, 18:46</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/3.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Erebus Novak</a></div>
+                                    <div class="position">Prague, CZ</div>
+                                    <div class="time">Applied: Mar 23, 9:02</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/2.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Leopoldo Reier</a></div>
+                                    <div class="position">London, UK</div>
+                                    <div class="time">Applied: Jun 6, 15:34</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/13.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Frans Garey</a></div>
+                                    <div class="position">London, UK</div>
+                                    <div class="time">Applied: Jun 8, 17:20</div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/14.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Jessica Johnsson</a></div>
+                                    <div class="position">Sandwich, UK</div>
+                                    <div class="time">Applied: Jun 8, 9:13</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="accepted" class="tab-pane">
+                        <h5 class="tab-header"><i class="icon-star"></i> 10 Accepted</h5>
+                        <ul class="users-list user-list-no-hover">
+                            <li>
+                                <img src="img/14.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Jessica Johnsson</a></div>
+                                    <div class="options">
+                                        <button class="btn btn-xs btn-success">
+                                            <i class="icon-phone"></i>
+                                            Call
+                                        </button>
+                                        <button class="btn btn-xs btn-warning">
+                                            <i class="icon-envelope-alt"></i>
+                                            Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/13.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Frans Garey</a></div>
+                                    <div class="options">
+                                        <button class="btn btn-xs btn-success">
+                                            <i class="icon-phone"></i>
+                                            Call
+                                        </button>
+                                        <button class="btn btn-xs btn-warning">
+                                            <i class="icon-envelope-alt"></i>
+                                            Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/3.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Erebus Novak</a></div>
+                                    <div class="options">
+                                        <button class="btn btn-xs btn-success">
+                                            <i class="icon-phone"></i>
+                                            Call
+                                        </button>
+                                        <button class="btn btn-xs btn-warning">
+                                            <i class="icon-envelope-alt"></i>
+                                            Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/2.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Leopoldo Reier</a></div>
+                                    <div class="options">
+                                        <button class="btn btn-xs btn-success">
+                                            <i class="icon-phone"></i>
+                                            Call
+                                        </button>
+                                        <button class="btn btn-xs btn-warning">
+                                            <i class="icon-envelope-alt"></i>
+                                            Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/1.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Finees Lund</a></div>
+                                    <div class="options">
+                                        <button class="btn btn-xs btn-success">
+                                            <i class="icon-phone"></i>
+                                            Call
+                                        </button>
+                                        <button class="btn btn-xs btn-warning">
+                                            <i class="icon-envelope-alt"></i>
+                                            Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="rejected" class="tab-pane">
+                        <h5 class="tab-header"><i class="icon-comments"></i> 16 Rejected</h5>
+                        <ul class="users-list">
+                            <li>
+                                <img src="img/13.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Frans Garey</a></div>
+                                    <div class="comment">
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                        sed quia
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/1.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Finees Lund</a></div>
+                                    <div class="comment">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        eu fugiat.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/14.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Jessica Johnsson</a></div>
+                                    <div class="comment">
+                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/3.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Erebus Novak</a></div>
+                                    <div class="comment">
+                                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/2.jpg" alt="" class="pull-left img-circle"/>
+                                <div class="user-info">
+                                    <div class="name"><a href="#">Leopoldo Reier</a></div>
+                                    <div class="comment">
+                                        Laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis
+                                        et quasi.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<% script('js/review.js') -%>
